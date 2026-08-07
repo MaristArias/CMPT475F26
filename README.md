@@ -157,7 +157,7 @@ If a team cannot explain or defend part of its submission, that work will not de
 | Evaluation and hardening | Does it work well enough, safely enough? | Tests, user or data evaluation, security and performance results |
 | Final release | Can others understand, use, and assess it? | Release, documentation, presentation, demonstration, retrospective |
 
-Specific deadlines and submission instructions will be published in `[course calendar location]`.
+Specific deadlines and submission instructions will be published in Brightspace.
 
 ## Initial proposal
 
