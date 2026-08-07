@@ -1,13 +1,11 @@
-# Capping Projects 2026–2027
+# Capping 2026
 
 ## Beyond Coding: Engineering Intelligent, Secure, and Reliable Systems
 
 > From AI-assisted prototypes to production-ready solutions with measurable real-world value.
 
-**Course:** `[Course number and section]`  
-**Instructor:** `[Instructor name and contact information]`  
-**Class resources:** `[Course site or LMS link]`  
-**Project submissions:** `[Submission link or instructions]`
+**Course:** `CMPT475/76`  
+**Instructor:** `Juan Arias`  
 
 ---
 
