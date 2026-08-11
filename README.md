@@ -10,9 +10,9 @@
 
 Artificial intelligence is changing how software is created, but producing code is only one part of solving a meaningful computing problem. Computer scientists must also understand users, evaluate technologies, design systems, work responsibly with data, protect against security threats, and deliver reliable solutions.
 
-This year's Capping Projects challenge you to design, implement, deploy, and evaluate a substantial computing system addressing a genuine organizational, community, scientific, or societal need.
+This year's Capping projects challenge you to design, implement, deploy, and evaluate a substantial computing system addressing a genuine organizational, community, scientific, or societal need.
 
-Your project may involve artificial intelligence, cybersecurity, data science, cloud and enterprise computing, the Internet of Things, interactive experiences, or conventional software engineering. AI is encouraged when it creates demonstrable value, but it is not required and should not be added merely as a decorative feature.
+Your project may involve artificial intelligence, cloud and enterprise computing, the Internet of Things, interactive experiences, or conventional software engineering. AI is encouraged when it creates demonstrable value, but it is not required and should not be added merely as a decorative feature.
 
 The goal is not simply to show that your team can build an application. The goal is to show that your team can **own a problem and engineer a credible solution**.
 
