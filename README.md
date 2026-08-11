@@ -1,4 +1,4 @@
-# Capping 2026 (CMPT475/76)
+# Capping (CMPT475/76): Projects 2026
 
 ## Beyond Coding: Engineering Intelligent, Secure, and Reliable Systems
 
