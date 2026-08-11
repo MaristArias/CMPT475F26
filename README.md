@@ -1,11 +1,8 @@
-# Capping 2026
+# Capping 2026 (CMPT475/76)
 
 ## Beyond Coding: Engineering Intelligent, Secure, and Reliable Systems
 
 > From AI-assisted prototypes to production-ready solutions with measurable real-world value.
-
-**Course:** `CMPT475/76`  
-**Instructor:** `Juan Arias`  
 
 ---
 
