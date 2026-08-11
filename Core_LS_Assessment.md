@@ -1,4 +1,4 @@
-# Core/LS Assessment: Computer Science
+# Core/LS Assessment
 
 ## Goals
 
