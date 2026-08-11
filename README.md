@@ -164,20 +164,6 @@ The initial proposal should be concise and should answer:
 
 A proposal is not strengthened by listing more features. It is strengthened by a clearer problem, credible evidence, thoughtful constraints, and an achievable evaluation plan.
 
-## Ideas that usually need further development
-
-The following starting points are typically too shallow unless they are connected to a distinctive problem and substantial technical challenge:
-
-- A generic chatbot connected to a model API
-- A standard create/read/update/delete application
-- A dashboard without a defined decision or action
-- A clone of an existing commercial product
-- A model comparison based only on headline accuracy
-- An application with an AI feature added at the end
-- A technically impressive demonstration without real users or evaluation
-
-These technologies and formats are not prohibited. They simply do not constitute a strong Capping Project by themselves.
-
 ## How projects will be assessed
 
 Assessment will consider the quality of the complete engineering effort, including:
@@ -192,7 +178,7 @@ Assessment will consider the quality of the complete engineering effort, includi
 - Communication, presentation, and demonstration
 - Individual understanding and contribution
 
-Exact deliverables and grading weights will be provided with the corresponding assignments.
+Exact deliverables and grading weights will be provided with the corresponding assignments and the rubric published in Brightspace.
 
 ## Inspiration
 
