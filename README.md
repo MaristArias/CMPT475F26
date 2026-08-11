@@ -42,29 +42,21 @@ Build an AI-enabled system that improves a real workflow or supports a meaningfu
 
 AI projects must evaluate accuracy, reliability, failure modes, safety, latency, and cost. A generic chatbot interface is not, by itself, a sufficient project.
 
-### 2. Secure and resilient computing
-
-Address cybersecurity, privacy, identity, fraud prevention, threat detection, software supply-chain risk, incident response, or infrastructure resilience. Projects should use a defensible threat model and demonstrate how the proposed controls reduce identified risks.
-
-### 3. Data-intensive and decision systems
+### 2. Data-intensive and decision systems
 
 Create systems for data acquisition, quality management, real-time processing, analytics, forecasting, visualization, or decision support. Projects must connect data to a specific user decision or operational outcome; a collection of charts without an actionable purpose is not sufficient.
 
-### 4. Cloud and enterprise engineering
+### 3. Cloud and enterprise engineering
 
 Explore distributed applications, developer platforms, observability, deployment automation, reliability engineering, enterprise integration, resource management, or cost optimization. Projects should make architecture and operational trade-offs visible and measurable.
 
-### 5. Internet of Things and edge computing
+### 4. Internet of Things and edge computing
 
 Connect software with physical environments through sensors, devices, networks, or edge intelligence. Projects must consider device security, intermittent connectivity, data handling, and failure in the physical world.
 
-### 6. Human-centered and public-interest technology
+### 5. Human-centered and public-interest technology
 
 Design technology for accessibility, education, healthcare, civic participation, sustainability, digital well-being, or community needs. Projects should be developed with—not merely for—the intended users whenever possible.
-
-### 7. Interactive computing and games
-
-Develop technically substantial interactive experiences, simulations, multiplayer systems, adaptive applications, accessible games, procedural systems, or tools for creators. Evaluation should address both technical performance and the intended player or user experience.
 
 ## What every project must demonstrate
 
