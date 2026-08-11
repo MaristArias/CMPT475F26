@@ -18,7 +18,7 @@ The goal is not simply to show that your team can build an application. The goal
 
 ## Why this theme?
 
-The U.S. computing market increasingly rewards broad engineering ability rather than code production alone. Current projections from the U.S. Bureau of Labor Statistics anticipate strong growth in software development, data science, and information security, while narrower computer-programmer employment is projected to decline.
+The computing market increasingly rewards broad engineering ability rather than code production alone. Current projections from the U.S. Bureau of Labor Statistics anticipate strong growth in software development, data science, and information security, while narrower computer-programmer employment is projected to decline.
 
 This theme therefore emphasizes the abilities that distinguish an effective computing professional:
 
