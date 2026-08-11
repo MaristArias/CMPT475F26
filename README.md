@@ -122,7 +122,7 @@ The [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-managem
 
 ### AI as a development tool
 
-You may use approved AI-assisted development tools subject to the course and University academic-integrity policies. AI assistance does not transfer responsibility: the team remains accountable for every design decision, dependency, claim, and line of submitted code.
+You may use AI-assisted development tools subject to the course and University academic-integrity policies. AI assistance does not transfer responsibility: the team remains accountable for every design decision, dependency, claim, and line of submitted code.
 
 Teams must:
 
