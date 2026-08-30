@@ -648,7 +648,7 @@ The team will report participant count, method, conditions, raw measure definiti
 
 ## 22. Test Schedule
 
-The schedule aligns with the one-semester [Sample Project Plan](./Sample%20Project%20Plan.md).
+The schedule aligns with the one-semester [Sample Project Plan](./Sample_Project_Plan.md).
 
 | Period | Test focus | Exit evidence |
 |---|---|---|
