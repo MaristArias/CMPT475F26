@@ -29,9 +29,9 @@ This document explains the testing strategy, responsibilities, environments, dat
 
 ## 2. Related Documents
 
-- [Sample Requirements Document](./Sample%20Requirements%20Document.md)
-- [Sample Project Plan](./Sample%20Project%20Plan.md)
-- [Sample Use Case and Class Diagrams](./Sample%20Use%20Case%20and%20Class%20Diagrams.md)
+- [Sample Requirements Document](./Sample_Requirements.md)
+- [Sample Project Plan](./Sample_Project_Plan.md)
+- [Sample Use Case and Class Diagrams](./Sample_Use_Case_Class_diagram.md)
 
 If these documents conflict, the team must resolve the conflict and update the affected baseline rather than silently choosing one interpretation.
 
