@@ -48,13 +48,13 @@ AccessPath will address the information and route-planning portions of this prob
 
 | ID | Measure | Target | Evaluation method |
 |---|---|---:|---|
-| SM-01 | Route completion rate | At least 90% of test routes completed without encountering a known incompatible barrier | Moderated field tests with representative users |
-| SM-02 | Task completion | At least 85% of participants can plan a route without assistance | Usability test |
-| SM-03 | Planning time | Median route-planning time of 60 seconds or less | Usability test instrumentation |
-| SM-04 | Route validity | 100% of routes in the validation set obey the selected hard constraints | Automated route-engine tests |
-| SM-05 | Update latency | A published closure appears in route results within 60 seconds | Integration and performance test |
-| SM-06 | Accessibility | No critical WCAG 2.2 Level AA violations in the tested workflows | Automated scan plus manual audit |
-| SM-07 | Availability | 99.0% availability during the final 30-day evaluation period | External uptime monitor |
+| SM.01 | Route completion rate | At least 90% of test routes completed without encountering a known incompatible barrier | Moderated field tests with representative users |
+| SM.02 | Task completion | At least 85% of participants can plan a route without assistance | Usability test |
+| SM.03 | Planning time | Median route-planning time of 60 seconds or less | Usability test instrumentation |
+| SM.04 | Route validity | 100% of routes in the validation set obey the selected hard constraints | Automated route-engine tests |
+| SM.05 | Update latency | A published closure appears in route results within 60 seconds | Integration and performance test |
+| SM.06 | Accessibility | No critical WCAG 2.2 Level AA violations in the tested workflows | Automated scan plus manual audit |
+| SM.07 | Availability | 99.0% availability during the final 30-day evaluation period | External uptime monitor |
 
 Targets are project goals, not claims that the finished system can eliminate all navigation risk.
 
@@ -133,7 +133,7 @@ The system will not require ordinary route-planning users to create accounts.
 
 ## 8. User Stories
 
-### US-01: Plan a stair-free route
+### US.01: Plan a stair-free route
 
 As a campus visitor who cannot use stairs, I want to request a stair-free route so that I can reach my destination without encountering an impassable barrier.
 
@@ -143,7 +143,7 @@ As a campus visitor who cannot use stairs, I want to request a stair-free route 
 - If no qualifying route is known, the system clearly states that it cannot find one and does not silently return a route containing stairs.
 - The result identifies any elevator on which the route depends.
 
-### US-02: Understand a longer route
+### US.02: Understand a longer route
 
 As a user, I want to know why an accessible route is longer than the shortest route so that I can make an informed decision.
 
@@ -152,7 +152,7 @@ As a user, I want to know why an accessible route is longer than the shortest ro
 - When the accessible route is more than 10% longer than the unconstrained shortest route, the result explains the primary avoided barrier or constraint.
 - The explanation uses plain language and does not expose internal implementation details.
 
-### US-03: Publish an elevator outage
+### US.03: Publish an elevator outage
 
 As a Facilities editor, I want to record an elevator outage with an expected end time so that new routes avoid that elevator while the outage is active.
 
@@ -164,7 +164,7 @@ As a Facilities editor, I want to record an elevator outage with an expected end
 - The record automatically becomes inactive at its expiration time unless the editor extends it.
 - The create, edit, and expiration events appear in the audit log.
 
-### US-04: Report inaccurate information
+### US.04: Report inaccurate information
 
 As a route-planning user, I want to report a possible barrier or map error so that authorized staff can investigate it.
 
@@ -182,104 +182,104 @@ The keywords **MUST**, **SHOULD**, and **MAY** indicate required, recommended, a
 
 ### 9.1 Route planning
 
-- **FR-01:** The system MUST allow a user to select an origin and destination from known campus locations.
-- **FR-02:** The system MUST validate that the origin and destination are different and belong to the supported map area.
-- **FR-03:** The system MUST support hard constraints for avoiding stairs and active closures.
-- **FR-04:** The system MUST support preferences for maximum slope, maximum route distance, elevator use, and indoor or outdoor travel.
-- **FR-05:** The route engine MUST exclude any segment that violates a selected hard constraint.
-- **FR-06:** The system MUST return a map, estimated distance, estimated travel time, and ordered route steps.
-- **FR-07:** The system MUST identify active warnings and infrastructure dependencies relevant to the route.
-- **FR-08:** When no compatible route is known, the system MUST say so and MUST NOT substitute an incompatible route without explicit user consent.
-- **FR-09:** The system SHOULD provide up to two alternative qualifying routes when materially different alternatives exist.
-- **FR-10:** The user MUST be able to revise preferences and recalculate the route.
+- **FR.01:** The system MUST allow a user to select an origin and destination from known campus locations.
+- **FR.02:** The system MUST validate that the origin and destination are different and belong to the supported map area.
+- **FR.03:** The system MUST support hard constraints for avoiding stairs and active closures.
+- **FR.04:** The system MUST support preferences for maximum slope, maximum route distance, elevator use, and indoor or outdoor travel.
+- **FR.05:** The route engine MUST exclude any segment that violates a selected hard constraint.
+- **FR.06:** The system MUST return a map, estimated distance, estimated travel time, and ordered route steps.
+- **FR.07:** The system MUST identify active warnings and infrastructure dependencies relevant to the route.
+- **FR.08:** When no compatible route is known, the system MUST say so and MUST NOT substitute an incompatible route without explicit user consent.
+- **FR.09:** The system SHOULD provide up to two alternative qualifying routes when materially different alternatives exist.
+- **FR.10:** The user MUST be able to revise preferences and recalculate the route.
 
 ### 9.2 Accessibility information
 
-- **FR-11:** The system MUST represent paths, stairs, ramps, entrances, elevators, and relevant interior connections.
-- **FR-12:** Each route segment MUST record the accessibility attributes used by the route engine.
-- **FR-13:** User-facing information MUST display when a relevant record was last verified.
-- **FR-14:** The system MUST distinguish verified information from unverified user reports.
-- **FR-15:** The system SHOULD warn the user when a route depends on information older than the configured review interval.
+- **FR.11:** The system MUST represent paths, stairs, ramps, entrances, elevators, and relevant interior connections.
+- **FR.12:** Each route segment MUST record the accessibility attributes used by the route engine.
+- **FR.13:** User-facing information MUST display when a relevant record was last verified.
+- **FR.14:** The system MUST distinguish verified information from unverified user reports.
+- **FR.15:** The system SHOULD warn the user when a route depends on information older than the configured review interval.
 
 ### 9.3 Closure management
 
-- **FR-16:** An Editor MUST be able to create, view, update, activate, deactivate, and expire a closure.
-- **FR-17:** A closure MUST identify the affected asset or map segment, status, effective time, source, and editor.
-- **FR-18:** The system MUST prevent an Editor from creating a closure whose end time precedes its start time.
-- **FR-19:** Active closures MUST affect route calculation within the target update latency.
-- **FR-20:** Expired or deactivated closures MUST cease affecting route calculation.
-- **FR-21:** The system MUST retain an audit history of administrative changes.
+- **FR.16:** An Editor MUST be able to create, view, update, activate, deactivate, and expire a closure.
+- **FR.17:** A closure MUST identify the affected asset or map segment, status, effective time, source, and editor.
+- **FR.18:** The system MUST prevent an Editor from creating a closure whose end time precedes its start time.
+- **FR.19:** Active closures MUST affect route calculation within the target update latency.
+- **FR.20:** Expired or deactivated closures MUST cease affecting route calculation.
+- **FR.21:** The system MUST retain an audit history of administrative changes.
 
 ### 9.4 Feedback
 
-- **FR-22:** A user MUST be able to submit a report associated with a location or route step.
-- **FR-23:** A report MUST include a category, description, submission time, and review status.
-- **FR-24:** The system MUST treat all public reports as unverified until reviewed by an Editor.
-- **FR-25:** An Editor MUST be able to mark a report as under review, resolved, rejected, or duplicate.
-- **FR-26:** The application MUST rate-limit public report submissions.
+- **FR.22:** A user MUST be able to submit a report associated with a location or route step.
+- **FR.23:** A report MUST include a category, description, submission time, and review status.
+- **FR.24:** The system MUST treat all public reports as unverified until reviewed by an Editor.
+- **FR.25:** An Editor MUST be able to mark a report as under review, resolved, rejected, or duplicate.
+- **FR.26:** The application MUST rate-limit public report submissions.
 
 ### 9.5 Administration
 
-- **FR-27:** Administrative functions MUST require authentication.
-- **FR-28:** The system MUST enforce role-based authorization for Editor and Administrator actions.
-- **FR-29:** An Administrator MUST be able to grant or remove the Editor role.
-- **FR-30:** The system MUST record successful and failed administrative sign-in attempts.
-- **FR-31:** An Administrator MUST be able to export active closures and audit records in a documented format.
+- **FR.27:** Administrative functions MUST require authentication.
+- **FR.28:** The system MUST enforce role-based authorization for Editor and Administrator actions.
+- **FR.29:** An Administrator MUST be able to grant or remove the Editor role.
+- **FR.30:** The system MUST record successful and failed administrative sign-in attempts.
+- **FR.31:** An Administrator MUST be able to export active closures and audit records in a documented format.
 
 ## 10. Nonfunctional Requirements
 
 ### 10.1 Accessibility and usability
 
-- **NFR-01:** The route-planning and administrative workflows MUST conform to WCAG 2.2 Level AA for the tested scope.
-- **NFR-02:** All functionality MUST be operable using a keyboard alone.
-- **NFR-03:** Information conveyed visually on the map MUST also be available in text.
-- **NFR-04:** The interface MUST not rely on color alone to communicate route status or barriers.
-- **NFR-05:** At 200% browser zoom, required content and controls MUST remain usable without loss of information.
-- **NFR-06:** Error messages MUST identify the problem and provide a useful recovery action.
+- **NFR.01:** The route-planning and administrative workflows MUST conform to WCAG 2.2 Level AA for the tested scope.
+- **NFR.02:** All functionality MUST be operable using a keyboard alone.
+- **NFR.03:** Information conveyed visually on the map MUST also be available in text.
+- **NFR.04:** The interface MUST not rely on color alone to communicate route status or barriers.
+- **NFR.05:** At 200% browser zoom, required content and controls MUST remain usable without loss of information.
+- **NFR.06:** Error messages MUST identify the problem and provide a useful recovery action.
 
 ### 10.2 Performance
 
-- **NFR-07:** At least 95% of route requests in the agreed test workload MUST complete within 2 seconds, excluding third-party map-tile loading.
-- **NFR-08:** At least 95% of ordinary API requests MUST complete within 500 milliseconds under the same workload.
-- **NFR-09:** The system MUST support 100 concurrent route-planning users during the project evaluation.
-- **NFR-10:** An administrative update MUST affect route results within 60 seconds.
+- **NFR.07:** At least 95% of route requests in the agreed test workload MUST complete within 2 seconds, excluding third-party map-tile loading.
+- **NFR.08:** At least 95% of ordinary API requests MUST complete within 500 milliseconds under the same workload.
+- **NFR.09:** The system MUST support 100 concurrent route-planning users during the project evaluation.
+- **NFR.10:** An administrative update MUST affect route results within 60 seconds.
 
 ### 10.3 Reliability and recovery
 
-- **NFR-11:** The deployed system SHOULD achieve 99.0% availability during the final 30-day evaluation period, excluding announced maintenance.
-- **NFR-12:** A failure to retrieve optional map tiles MUST NOT cause the text route instructions to disappear.
-- **NFR-13:** Production data MUST be backed up at least once every 24 hours.
-- **NFR-14:** The team MUST demonstrate restoration of the application database from a backup before final release.
-- **NFR-15:** The recovery point objective MUST be no more than 24 hours, and the recovery time objective MUST be no more than 4 hours for the project deployment.
+- **NFR.11:** The deployed system SHOULD achieve 99.0% availability during the final 30-day evaluation period, excluding announced maintenance.
+- **NFR.12:** A failure to retrieve optional map tiles MUST NOT cause the text route instructions to disappear.
+- **NFR.13:** Production data MUST be backed up at least once every 24 hours.
+- **NFR.14:** The team MUST demonstrate restoration of the application database from a backup before final release.
+- **NFR.15:** The recovery point objective MUST be no more than 24 hours, and the recovery time objective MUST be no more than 4 hours for the project deployment.
 
 ### 10.4 Security
 
-- **NFR-16:** All network communication MUST use HTTPS in production.
-- **NFR-17:** Administrative sessions MUST use secure, HTTP-only, same-site cookies or an equivalently protected mechanism.
-- **NFR-18:** The system MUST validate authorization on the server for every privileged operation.
-- **NFR-19:** Secrets MUST NOT be stored in the source repository or client-side application.
-- **NFR-20:** User-supplied content MUST be validated and safely encoded before display.
-- **NFR-21:** Dependencies MUST be scanned for known vulnerabilities as part of continuous integration.
-- **NFR-22:** High-severity vulnerabilities affecting an exposed component MUST be resolved or formally accepted with documented justification before release.
-- **NFR-23:** Audit records MUST identify the actor, action, target, result, and time without storing authentication secrets.
+- **NFR.16:** All network communication MUST use HTTPS in production.
+- **NFR.17:** Administrative sessions MUST use secure, HTTP-only, same-site cookies or an equivalently protected mechanism.
+- **NFR.18:** The system MUST validate authorization on the server for every privileged operation.
+- **NFR.19:** Secrets MUST NOT be stored in the source repository or client-side application.
+- **NFR.20:** User-supplied content MUST be validated and safely encoded before display.
+- **NFR.21:** Dependencies MUST be scanned for known vulnerabilities as part of continuous integration.
+- **NFR.22:** High-severity vulnerabilities affecting an exposed component MUST be resolved or formally accepted with documented justification before release.
+- **NFR.23:** Audit records MUST identify the actor, action, target, result, and time without storing authentication secrets.
 
 ### 10.5 Privacy
 
-- **NFR-24:** Anonymous route requests MUST NOT require the user's name, disability, or account identifier.
-- **NFR-25:** The application MUST NOT store a user's precise location history by default.
-- **NFR-26:** Operational logs MUST avoid full IP addresses and other unnecessary personal data whenever technically feasible.
-- **NFR-27:** Optional contact information submitted with a report MUST be visible only to authorized reviewers.
-- **NFR-28:** The system MUST publish a plain-language privacy notice describing collected data, purpose, access, retention, and deletion.
-- **NFR-29:** Unneeded feedback contact information MUST be deleted after the documented retention period.
+- **NFR.24:** Anonymous route requests MUST NOT require the user's name, disability, or account identifier.
+- **NFR.25:** The application MUST NOT store a user's precise location history by default.
+- **NFR.26:** Operational logs MUST avoid full IP addresses and other unnecessary personal data whenever technically feasible.
+- **NFR.27:** Optional contact information submitted with a report MUST be visible only to authorized reviewers.
+- **NFR.28:** The system MUST publish a plain-language privacy notice describing collected data, purpose, access, retention, and deletion.
+- **NFR.29:** Unneeded feedback contact information MUST be deleted after the documented retention period.
 
 ### 10.6 Maintainability and portability
 
-- **NFR-30:** A new developer MUST be able to build and run the development environment by following the repository documentation.
-- **NFR-31:** Database schema changes MUST be versioned and reproducible.
-- **NFR-32:** Automated tests MUST cover the route engine's hard-constraint rules.
-- **NFR-33:** The main branch MUST pass formatting, static analysis, unit tests, and dependency checks before deployment.
-- **NFR-34:** The system MUST be deployable from version-controlled configuration without undocumented manual production changes.
-- **NFR-35:** External services MUST be accessed through documented interfaces so they can be replaced without rewriting unrelated domain logic.
+- **NFR.30:** A new developer MUST be able to build and run the development environment by following the repository documentation.
+- **NFR.31:** Database schema changes MUST be versioned and reproducible.
+- **NFR.32:** Automated tests MUST cover the route engine's hard-constraint rules.
+- **NFR.33:** The main branch MUST pass formatting, static analysis, unit tests, and dependency checks before deployment.
+- **NFR.34:** The system MUST be deployable from version-controlled configuration without undocumented manual production changes.
+- **NFR.35:** External services MUST be accessed through documented interfaces so they can be replaced without rewriting unrelated domain logic.
 
 ## 11. Data Requirements
 
@@ -356,12 +356,12 @@ The team must document what happens when each external dependency is unavailable
 
 ## 13. Business Rules
 
-- **BR-01:** Safety- or accessibility-related hard constraints take precedence over route length.
-- **BR-02:** An unverified public report may generate a warning for an Editor but may not automatically close a path.
-- **BR-03:** Only an Administrator may grant administrative roles.
-- **BR-04:** A closure with no known end time remains active until an Editor resolves it.
-- **BR-05:** The system must show uncertainty when the available data cannot establish that a route satisfies the user's constraints.
-- **BR-06:** The product must not describe a route as “guaranteed accessible.”
+- **BR.01:** Safety- or accessibility-related hard constraints take precedence over route length.
+- **BR.02:** An unverified public report may generate a warning for an Editor but may not automatically close a path.
+- **BR.03:** Only an Administrator may grant administrative roles.
+- **BR.04:** A closure with no known end time remains active until an Editor resolves it.
+- **BR.05:** The system must show uncertainty when the available data cannot establish that a route satisfies the user's constraints.
+- **BR.06:** The product must not describe a route as “guaranteed accessible.”
 
 ## 14. Constraints
 
@@ -402,11 +402,11 @@ No requirement is considered complete merely because code has been written. Comp
 
 | Goal | User story | Requirements | Verification |
 |---|---|---|---|
-| Accessible route planning | US-01 | FR-01–FR-10, BR-01 | Route-engine unit tests, integration tests, field trials |
-| Explain route choices | US-02 | FR-06–FR-09, NFR-06 | End-to-end tests and usability study |
-| Timely closure updates | US-03 | FR-16–FR-21, NFR-10 | Integration test, authorization test, timing measurement |
-| Responsible public feedback | US-04 | FR-22–FR-26, NFR-27–NFR-29 | End-to-end test, abuse test, privacy review |
-| Inclusive interface | All | NFR-01–NFR-06 | Automated and manual accessibility audit |
+| Accessible route planning | US.01 | FR.01–FR.10, BR.01 | Route-engine unit tests, integration tests, field trials |
+| Explain route choices | US.02 | FR.06–FR.09, NFR.06 | End-to-end tests and usability study |
+| Timely closure updates | US.03 | FR.16–FR.21, NFR.10 | Integration test, authorization test, timing measurement |
+| Responsible public feedback | US.04 | FR.22–FR.26, NFR.27–NFR.29 | End-to-end test, abuse test, privacy review |
+| Inclusive interface | All | NFR.01–NFR.06 | Automated and manual accessibility audit |
 
 The project team's traceability table should eventually connect every approved requirement to design components, work items, and verification evidence.
 
