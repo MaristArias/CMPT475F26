@@ -2,9 +2,9 @@
 
 ## AccessPath: Accessible Campus Navigation
 
-> **Purpose of this document:** This is a fictional example for CMPT 475. It demonstrates how use case and class diagrams can communicate a system's behavior and conceptual structure. The diagrams use [Mermaid](https://mermaid.js.org/) so they render in GitHub Markdown.
+> **Purpose of this document:** This is a fictional example for CMPT 475. It demonstrates how use case and class diagrams can communicate a system's behavior and conceptual structure.
 
-These diagrams support the [Sample Requirements Document](./Sample%20Requirements%20Document.md) and [Sample Project Plan](./Sample%20Project%20Plan.md). They are analysis and design artifacts, not substitutes for written requirements, acceptance criteria, or implementation documentation.
+These diagrams support the [Sample Requirements Document](./Sample_Requirements.md) and [Sample Project Plan](./Sample_Project_Plan.md). They are analysis and design artifacts, not substitutes for written requirements, acceptance criteria, or implementation documentation.
 
 ## 1. Diagram Scope
 
