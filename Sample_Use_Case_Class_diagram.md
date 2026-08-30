@@ -80,16 +80,16 @@ flowchart LR
 
 | ID | Use case | Primary actor | Outcome | Related requirements |
 |---|---|---|---|---|
-| UC-01 | Plan an accessible route | Visitor | A qualifying route is displayed, or the system clearly explains that none is known | FR-01–FR-10 |
-| UC-02 | Set accessibility preferences | Visitor | Selected constraints and preferences influence route calculation | FR-03–FR-05, FR-10 |
-| UC-03 | View route details and warnings | Visitor | The user receives map and text directions, dependencies, warnings, and freshness information | FR-06–FR-09, FR-13–FR-15 |
-| UC-04 | Report a barrier or map error | Visitor | An unverified report is recorded for later review | FR-22–FR-26 |
-| UC-05 | Sign in | Editor or Administrator | The user's identity and role are established | FR-27–FR-30 |
-| UC-06 | Manage temporary closures | Editor | A closure is created, changed, activated, deactivated, or expired | FR-16–FR-21 |
-| UC-07 | Review feedback reports | Editor | A report receives a review status without automatically changing map data | FR-24–FR-25 |
-| UC-08 | Manage editor access | Administrator | Editor permissions are granted or removed | FR-28–FR-29 |
-| UC-09 | Review audit history | Administrator | Privileged changes can be inspected | FR-21, NFR-23 |
-| UC-10 | Export administrative data | Editor or Administrator | Authorized records are exported in a documented format | FR-31 |
+| UC.01 | Plan an accessible route | Visitor | A qualifying route is displayed, or the system clearly explains that none is known | FR.01–FR.10 |
+| UC.02 | Set accessibility preferences | Visitor | Selected constraints and preferences influence route calculation | FR.03–FR.05, FR.10 |
+| UC.03 | View route details and warnings | Visitor | The user receives map and text directions, dependencies, warnings, and freshness information | FR.06–FR.09, FR.13–FR.15 |
+| UC.04 | Report a barrier or map error | Visitor | An unverified report is recorded for later review | FR.22–FR.26 |
+| UC.05 | Sign in | Editor or Administrator | The user's identity and role are established | FR.27–FR.30 |
+| UC.06 | Manage temporary closures | Editor | A closure is created, changed, activated, deactivated, or expired | FR.16–FR.21 |
+| UC.07 | Review feedback reports | Editor | A report receives a review status without automatically changing map data | FR.24–FR.25 |
+| UC.08 | Manage editor access | Administrator | Editor permissions are granted or removed | FR.28–FR.29 |
+| UC.09 | Review audit history | Administrator | Privileged changes can be inspected | FR.21, NFR.23 |
+| UC.10 | Export administrative data | Editor or Administrator | Authorized records are exported in a documented format | FR.31 |
 
 ## 3. Detailed Use Cases
 
@@ -392,12 +392,12 @@ The diagram refers to several types whose possible values should be documented.
 
 | Model element | Requirement or use case | Verification idea |
 |---|---|---|
-| `RoutePreference.avoidStairs` and `Segment.containsStairs` | UC-01, FR-03–FR-05 | Generate route graphs containing stairs and prove excluded segments never appear |
-| `Closure.isActive()` | UC-06, FR-16–FR-20 | Test scheduled, active, expired, canceled, and open-ended closures |
-| `FeedbackReport.status` | UC-04, FR-22–FR-25 | Confirm every new public report begins as Unverified |
-| `AdministrativeUser.hasPermission()` | UC-05–UC-10, FR-27–FR-30 | Test every privileged operation with Visitor, Editor, and Administrator permissions |
-| `AuditEvent` | UC-06–UC-10, FR-21, NFR-23 | Verify successful and rejected privileged actions create complete records |
-| `RoutePlan.status` | UC-01, FR-08 | Test compatible, impossible, insufficient-data, and service-failure outcomes |
+| `RoutePreference.avoidStairs` and `Segment.containsStairs` | UC.01, FR.03–FR.05 | Generate route graphs containing stairs and prove excluded segments never appear |
+| `Closure.isActive()` | UC.06, FR.16–FR.20 | Test scheduled, active, expired, canceled, and open-ended closures |
+| `FeedbackReport.status` | UC.04, FR.22–FR.25 | Confirm every new public report begins as Unverified |
+| `AdministrativeUser.hasPermission()` | UC.05–UC.10, FR.27–FR.30 | Test every privileged operation with Visitor, Editor, and Administrator permissions |
+| `AuditEvent` | UC.06–UC.10, FR.21, NFR.23 | Verify successful and rejected privileged actions create complete records |
+| `RoutePlan.status` | UC.01, FR.08 | Test compatible, impossible, insufficient-data, and service-failure outcomes |
 
 ## 9. Notes for Students
 
